@@ -1,30 +1,52 @@
 void main(){
-  //using variables
+  //type bool
+  bool isEnabled = false;
+  bool isAlive = true;
+
+  //type int
+  int x = 8;
+  var y = -5;
+
+  //double
+  double xDouble = 8.8;
+  var yDouble = -5.3;
+  var zDouble = 0.09;
+
+  double xx = 8;
+  print(xx);
+
+  //String
+  String tom = "Tom";
+  String sam = 'Sam';
+  var kate = "Kate";
+  var alice = 'Alice';
+  //multiline strings
+  var multiline = '''
+    Многострочная 
+    строка
+    ''';
+  print(multiline);
+  String users = """
+    Список пользователей
+    Том
+    Сэм
+    """;
+  print(users);
+  //interpolation
   String name = "Tom";
-  print(name);
-  name = "Bob";
-  print(name);
-  //with var
-  var nameVar = "Varya";
-  print(nameVar);
-  //but cant change type
-  //nameVar = 45; - error
+  int age = 35;
+  String info = "Name: $name Age: $age";
 
-  //but can with dynamic
-  dynamic nameDynamic = "Dimon";
-  print(nameDynamic);
-  nameDynamic = 45;
-  print(nameDynamic);
+  //Runes
+  Runes input = Runes('\u041F\u0440\u0438\u0432\u0435\u0442');
+  Runes text = Runes('Привет');
+  print(input);
+  print(text);
+  print(String.fromCharCodes(input));
+  print(String.fromCharCodes(text));
 
-  //const and final
-  const nameConst = "Kostya";//it's installizing in compilation
-  print(nameConst);
-  final nameFinal = "Fenya";//it's installizing in runtime
-  print(nameFinal);
-  //type of installizing constant and interpolation
-  const a = 5;
-  const int b = 6;
-  final int c = 8;
-  final d = 9;
-  print("a:$a b:$b c:$c d:$d");
+  //sympol
+  Symbol libName = #foo_lib;
+  var className = #foo;
+  print(libName);
 }
